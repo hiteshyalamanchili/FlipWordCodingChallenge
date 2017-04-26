@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="FlipWord Internship Coding Challenge">
+    <meta name="author" content="Hitesh Yalamanchili">
+
+    <title>FlipWord Coding Challenge</title>
+
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link href="css/jumbotron.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/buttonGame.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">FlipWord Coding Challenge</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a>Hitesh Yalamanchili</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div style="width: 100%; overflow:auto;">
+        <div class="formDiv">
+            <h4>Instructions</h4>
+            <p>
+                The game will start once you submit your preferences. Your goal is to press the buttons in the right order to turn all buttons off (red state). Each button is associated with other buttons such that whenever a button is pressed, it flips the state of itself and of its associated buttons. To start, the buttons will all be on.
+            </p>
+            <p>
+                In the form below, you can specify the number of buttons you want to play with and the number of associations you want each button to have (not including itself).
+            </p>
+            <p>
+                Good luck!</p>
+            <form>
+                <label for="numButtons">Number of Buttons</label>
+                <input type="text" id="numButtons" name="numButtons" placeholder="Number of buttons...">
+
+                <label for="numAssociations">Number of Associations</label>
+                <input type="text" id="numAssociations" name="numAssociations" placeholder="Number of associations...">
+
+            </form>
+
+            <button onclick="startGame();">Load/Reset Game</button>
+        </div>
+        <div style="float:right;" id="canvasDiv">
+        </div>
+    </div>
+
+    <script src="js/buttonGame.js"></script>
+</body>
+
+</html>
